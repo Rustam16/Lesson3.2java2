@@ -9,7 +9,7 @@ public class BankAccount extends Exception {
 
 
     public void deposit(double sum) {
-        double amount =+ sum;
+        this.amount =+ sum;
     }
 
 
@@ -17,6 +17,6 @@ public class BankAccount extends Exception {
         if (this.amount < sum) {
             throw new LimitException("Limit",sum);
         }
-
+        this.amount -=sum;
     }
 }
